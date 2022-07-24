@@ -1,0 +1,171 @@
+/* Html */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  color: white;
+  overflow-x: hidden;
+}
+  
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: limegreen;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nav */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 5.5rem;
+  transition: width 400ms ease;
+  border-bottom-style: solid;
+  border-bottom-color: lime;
+  border-bottom-width: 1.5px;
+  border-top-style: solid;
+  border-top-color: lime;
+  border-top-width: 1.5px;
+  z-index: 99;
+}
+
+.navbar::before {
+  content: "";
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  background-size: cover;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 800ms;
+}
+
+.nav-link:hover {
+  background: forestgreen;
+}
+
+.nav-items {
+  list-style: none;
+  width: 100%;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  color: white;
+}
+
+.nav-link:hover > .color:hover {
+  transform: scale(1.5);
+}
+
+.color {
+  color: lime;
+  filter: brightness(150%);
+  transition: 200ms;
+}
+
+/* Main */
+
+main {
+  margin-top: 5.5rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+#title {
+  text-align: center;
+  transform: scale(1.5);
+}
+
+#desc-title {
+  text-align: center;
+  transform: scale(1.3);
+}
+
+#image {
+  width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid lime;
+}
+
+#img-caption {
+  display: none;
+}
+
+#tribute-info {
+  text-align: center;
+  padding: 20px 5px 0 5px;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#music-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+.audio-text {
+  margin: 13px 0;
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+#tribute-link {
+  color: lime;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+#tribute-link:hover {
+  color: forestgreen;
+}
