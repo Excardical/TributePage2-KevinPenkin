@@ -113,13 +113,17 @@ main {
   transform: scale(1.3);
 }
 
-#img-div {
+#image {
   width: 280px;
-  height: 400px;
+  height: auto;
   display: block;
-  margin: auto;
+  margin: 0 auto;
   padding: 30px;
   border: 1px solid lime;
+}
+
+#img-caption {
+  display: none;
 }
 
 #tribute-info {
@@ -130,6 +134,7 @@ main {
 .italic {
   font-style: italic;
   font-weight: 600;
+  text-decoration: none;
 }
 
 #music-div {
@@ -161,6 +166,7 @@ main {
 #tribute-link {
   color: lime;
   transition: 200ms;
+  cursor: pointer;
 }
 
 #tribute-link:hover {
@@ -190,7 +196,7 @@ main {
     justify-content: center;
   }
 
-  main {
+  #main {
     margin-top: 5.5rem;
     margin-left: 0;
   }
@@ -199,14 +205,12 @@ main {
     overflow-x: hidden;
   }
 
-  #img-div {
+  #image {
     border: none;
     display: block;
     margin: 0 auto;
-  }
-
-  .img-border {
-    border: none;
+    max-width: 100%;
+    max-height: 380px;
   }
 
   #footer {
@@ -235,5 +239,8 @@ main {
   }
   .navbar:hover .link-text {
     display: block;
+  }
+  body {
+    overflow-x: hidden;
   }
 }
