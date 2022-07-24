@@ -1,0 +1,239 @@
+/* Html */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  color: white;
+}
+  
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: limegreen;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nav */
+
+.navbar {
+  position: fixed;
+  transition: width 400ms ease;
+  border-right-style: solid;
+  border-right-color: lime;
+  border-right-width: 1.5px;
+  border-top-style: solid;
+  border-top-color: lime;
+  border-top-width: 1.5px;
+}
+
+.navbar::before {
+  content: "";
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  background-size: cover;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 800ms;
+}
+
+.nav-link:hover {
+  background: forestgreen;
+}
+
+.nav-items {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-items:last-child {
+  margin-top: 165px;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  color: white;
+}
+
+.nav-link:hover > .color:hover {
+  transform: scale(1.5);
+}
+
+.color {
+  color: lime;
+  filter: brightness(150%);
+  transition: 200ms;
+}
+
+/* Main */
+
+main {
+  margin-left: 5.5rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+#title {
+  text-align: center;
+  transform: scale(1.5);
+}
+
+#desc-title {
+  text-align: center;
+  transform: scale(1.3);
+}
+
+#img-div {
+  width: 280px;
+  height: 400px;
+  display: block;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid lime;
+}
+
+#tribute-info {
+  text-align: center;
+  padding: 20px 5px 0 5px;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 600;
+}
+
+#music-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+.audio-text {
+  margin: 13px 0;
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  height: 7rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5.5rem;
+  padding-bottom: 1rem;
+}
+
+#tribute-link {
+  color: lime;
+  transition: 200ms;
+}
+
+#tribute-link:hover {
+  color: forestgreen;
+}
+
+
+/* Media Query */
+  /* Small Screen */
+@media only screen and (max-width: 800px) {
+  .navbar {
+    top: 0;
+    width: 100vw;
+    height: 5.5rem;
+    border-bottom-style: solid;
+    border-bottom-color: lime;
+    border-bottom-width: 1.5px;
+    border-right: none;
+    z-index: 99;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin-top: 5.5rem;
+    margin-left: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #img-div {
+    border: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .img-border {
+    border: none;
+  }
+
+  #footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }  
+
+  .nav-items:last-child {
+    margin-top: 0;
+  }  
+}
+
+
+  /* Large Screen */
+@media only screen and (min-width: 800px) {
+  .navbar {
+    width: 5.5rem;
+    height: 100vh;
+    top: 0;
+    z-index: 99;
+  }
+  .navbar:hover {
+    width: 16rem;
+  }
+  .navbar:hover .link-text {
+    display: block;
+  }
+}
